@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { background: #f1f3f6; color: #1d2430; }
+
+@media print {
+  @page { size: A4; margin: 0; }
+  body * { visibility: hidden; }
+  #invoice, #invoice * { visibility: visible; }
+  #invoice { position: absolute; left: 0; top: 0; box-shadow: none !important; }
+  .preview-wrap { transform: none !important; }
+  .stage { height: auto !important; }
+}
